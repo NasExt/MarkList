@@ -1,0 +1,9 @@
+{if $item}
+	<a n:href="processItem! name=>$item" n:class="$ajaxRequest ? ajax" n:attr="title => $itemValue ? 'Unmark' : 'Mark'">
+		<input type="checkbox" name="{$item}" {if $itemValue}checked="checked" {/if}>
+	</a>
+{else}
+	<a n:href="processAll!" n:class="$ajaxRequest ? ajax" n:attr="title => $markAll ? 'Unmark all' : 'Mark all'">
+		<input type="checkbox" name="markAll" {if $markAll || $markList} checked="hecked"{/if}>
+	</a>
+{/if}
