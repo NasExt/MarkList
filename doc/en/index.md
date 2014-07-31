@@ -110,7 +110,7 @@ FooPresenter extends Presenter{
 }
 ```
 
-Configuration
+Template
 ````php
 	<table n:snippet="table">
 		<thead>
