@@ -12,7 +12,7 @@
 namespace NasExt\Controls\Storage;
 
 use Nette\Http\Session;
-use Nette\Object;
+use Nette\SmartObject;
 use Nette\Utils\Strings;
 
 
@@ -21,8 +21,10 @@ use Nette\Utils\Strings;
  *
  * @author Dusan Hudak
  */
-class MarkListStorage extends Object implements IMarkListStorage
+class MarkListStorage implements IMarkListStorage
 {
+	use SmartObject;
+
 	/** @var  Session */
 	private $session;
 
