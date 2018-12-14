@@ -89,7 +89,8 @@ class MarkList extends Control
 		parent::attached($presenter);
 
 		if ($presenter instanceof Presenter) {
-			$this->sectionName = substr(md5($this->reflection->getShortName() . '.' . $this->name . '.' . $this->presenter->name), 0, 4);
+			$reflection = new \ReflectionClass($this);
+			$this->sectionName = substr(md5($reflection->getShortName() . '.' . $this->name . '.' . $this->presenter->name), 0, 4);
 
 			if ($this->rememberMarkList == FALSE) {
 				if ($this->mlId != $this->sectionName) {
